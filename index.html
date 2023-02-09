@@ -14,6 +14,24 @@
 </head>
 <script src="https://kit.fontawesome.com/6d6952c5be.js" crossorigin="anonymous"></script>
 
+<!--- codigo jQuery --->
+<script src="_js/jquery.js"></script> 
+<script>
+  $(function() {
+      $("#menu-btn").click(function(e) {
+          $(".menu .mobile").toggle(); 
+      });
+
+      $(window).resize(function(e) {
+          var largura = $(window).width();
+          if(largura >= 701) {
+             $(".menu .mobile").hide(); 
+          } 
+      });
+  });
+</script>
+
+
 <body>
   <div class="img1">
     
@@ -21,11 +39,28 @@
   <header>
 
     <nav class="menu">
-      <ul class="container">
+      <img src="./img/icons8-space-64.png">
+      <ul class="desktop">
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#portfolio">Portifólio</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
+
+      <ul class="mobile">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#portfolio">Portifólio</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+
+      <!--- codigo SVG do botao do menu --->
+      <div id="menu-btn">
+        <svg width="30" height="30">
+            <path d="M0,5 30,5"     stroke="#fff" stroke-width="4"/>
+            <path d="M0,15 30,15"   stroke="#fff" stroke-width="4"/>
+            <path d="M0,25 30,25"   stroke="#fff" stroke-width="4"/>
+        </svg>
+      </div>
+
     </nav>
 
     <div class="title">
@@ -36,7 +71,7 @@
   </header>
 
 </div>
-  <section class="s1">
+  <section class="s1" id="sobre">
     <h2>Sobre</h2>
   </section>
   
@@ -47,21 +82,20 @@
     </figure>
     
     <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui voluptate, repudiandae reprehenderit reiciendis
-        voluptates, non illo minus odit, in quam ab eos aut placeat laudantium! Aspernatur qui autem totam aperiam?
-        A, numquam vitae! Porro, obcaecati iusto temporibus doloremque dignissimos suscipit et error labore provident
+      Eu busco utilizar JavaScript, CSS3, HTML5 e PHP na criação de minhas páginas
+      web. Atualmente, estou aprendendo a desenvolver aplicativos tanto para Android
+      quanto para iOS com o Flutter.
     </p> 
-
+    <br>
     <p>
-        iure! Inventore, ad a, aliquid blanditiis optio voluptatem nisi sunt illum ullam non, deleniti enim commodi!
-        Vero ullam numquam ea quibusdam quia unde vel at omnis nihil illo labore maxime quae expedita iure tempore,
-        delectus incidunt iste harum consequuntur? Fugit ullam ea laborum porro ipsum ex.
-        </p>
-
+      Para otimizar as linhas de código, procuro utilizar frameworks e bibliotecas, como
+      Bootstrap, JQuery e AJAX. Com o objetivo de apoiar meus projetos, uso PHP
+      para o back-end e MySQL para adicionar dados.
+    </p>
+    <br>
     <p>
-        Natus dicta minima provident, dolore veniam fugit voluptates eveniet optio quod magni tempora quidem quibusdam ut
-      doloremque, suscipit animi consequatur placeat. Possimus unde praesentium pariatur tempore nesciunt deleniti quam
-      blanditiis.
+      Tenho conhecimento básico em teste de penetração e tenho inglês avançado,
+      que completei na Witch idiomas.
     </p>
     
   </section>
