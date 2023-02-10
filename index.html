@@ -6,16 +6,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Matheus Luchsinger</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="mobile.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="_js/jquery.js"></script> 
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+  <script src="js/bootstrap.js"></script> 
   <link
     href="https://fonts.googleapis.com/css2?family=Kanit:wght@500&family=Marck+Script&family=Press+Start+2P&family=Russo+One&display=swap"
     rel="stylesheet">
-</head>
+  
+
 <script src="https://kit.fontawesome.com/6d6952c5be.js" crossorigin="anonymous"></script>
 
+<script>
+  var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+      var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("menu").style.top = "0";
+      } else {
+        document.getElementById("menu").style.top = "-50px";
+      }
+      prevScrollpos = currentScrollPos;
+    }
+  </script>
+
 <!--- codigo jQuery --->
-<script src="_js/jquery.js"></script> 
+
 <script>
   $(function() {
       $("#menu-btn").click(function(e) {
@@ -29,16 +48,18 @@
           } 
       });
   });
+  
 </script>
-
-
+</head>
 <body>
+
+
   <div class="img1">
     
   
   <header>
 
-    <nav class="menu">
+    <nav class="menu" >
       <img src="./img/icons8-space-64.png">
       <ul class="desktop">
         <li><a href="#sobre">Sobre</a></li>
@@ -46,7 +67,7 @@
         <li><a href="#contato">Contato</a></li>
       </ul>
 
-      <ul class="mobile">
+      <ul class="mobile" >
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#portfolio">Portifólio</a></li>
         <li><a href="#contato">Contato</a></li>
@@ -65,9 +86,10 @@
 
     <div class="title">
       <h1 class="site-title">Matheus Luchsinger</h1>
-      <h1 class="site-subtitle">Developer</h1>
+      <h1 class="site-subtitle">Full Stack Developer</h1>
     </div>
 
+    
   </header>
 
 </div>
@@ -78,10 +100,11 @@
   <section class="sobre container">
 
     <figure class="avatar">
-      <img src="https://avatars.githubusercontent.com/u/102822195?v=4" alt="Matheus Luchsinger">
+      <img  src="https://avatars.githubusercontent.com/u/102822195?v=4" alt="Matheus Luchsinger">
     </figure>
-    
-    <p>
+    <div class="container">
+      <h2>Competencias</h2>
+    <p class="collapse">
       Eu busco utilizar JavaScript, CSS3, HTML5 e PHP na criação de minhas páginas
       web. Atualmente, estou aprendendo a desenvolver aplicativos tanto para Android
       quanto para iOS com o Flutter.
@@ -97,7 +120,7 @@
       Tenho conhecimento básico em teste de penetração e tenho inglês avançado,
       que completei na Witch idiomas.
     </p>
-    
+    </div>
   </section>
 
   <section class="s2">
